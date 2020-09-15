@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run app",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/app/node_modules/@sap/html5-repo-mock/index.js",
+      "cwd": "${workspaceFolder}/app",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_flat_run_config_handler_id\",\"runnableId\":\"/home/user/projects/library-test/app\"}"
+      },
+      "args": [
+        "--standalone",
+        "/demoapp/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "envFile": "${workspaceFolder}/app/.env1",
+      "preLaunchTask": "Build app"
+    }
+  ]
+}
